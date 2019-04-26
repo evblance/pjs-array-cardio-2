@@ -53,3 +53,9 @@ console.log(needle);
  * Find the comment with this ID
  * Delete the comment with the ID of 823423
  */
+const targetIdx = comments.findIndex((comment) => {
+  return comment.id === 823423;
+});
+const updatedComments = [...comments];
+updatedComments.splice(targetIdx, 1);
+console.log(updatedComments);
