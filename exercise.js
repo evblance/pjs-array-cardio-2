@@ -20,11 +20,30 @@ const comments = [
  */
 
 /**
+ * Returns the age of a person.
+ */
+const age = (person) => {
+  return new Date().getFullYear() - person.year;
+};
+
+const olderThan19Exists = people.some((person) => {
+  return age(person) >= 19;
+});
+console.log(olderThan19Exists);
+
+const allOlderThan19 = people.every((person) => {
+  return age(person) >= 19;
+});
+console.log(allOlderThan19);
+
+/**
  * 2.
  * Array.prototype.find()
  * Find is like filter, but instead returns just the one you are looking for
  * find the comment with the ID of 823423
  */
+
+
 
 /**
  * 3.
